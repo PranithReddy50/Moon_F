@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Moon is Moon</title>
+<meta name="description" content="A quiet little place to leave a message, no pressure at all." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div class="sky" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="glow-drift"></div>
+  </div>
+
+  <main class="stage">
+
+    <!-- LEFT: Moon -->
+    <section class="panel panel--moon" aria-hidden="true">
+      <div class="moon-stage" id="moonStage">
+        <div class="moon-halo"></div>
+        <img
+          src="/assets/moon-face.png"
+          alt=""
+          class="moon-character"
+          id="moonCharacter"
+          draggable="false"
+        />
+        <div class="moon-dust">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENTER: Feedback -->
+    <section class="panel panel--center">
+      <div class="intro">
+        <p class="intro__eyebrow">Hello Miss.Moon</p>
+        <h1 class="intro__text" id="introText">
+          You can ask anything you want.You can say anything and even you can scold if you want to.Just Pause Stubbornness and Ego for Sometime you can resume it later Moon, no need to overthink it. Just say what&rsquo;s on your mind or simply whatever you wanted to say.  
+        </h1>
+        <!-- <h5>
+          If you want to say or ask something but don't want to Send(due to your stubborn/ego) then  you can type and click clear, it may clear your doubts from your mind if any.
+        </h5> -->
+        <!-- <h6>Intelligent Moon</h6> -->
+      </div>
+
+      <form id="feedbackForm" class="glass-card" novalidate>
+        <label for="feedbackInput" class="sr-only">Your message</label>
+        <textarea
+          id="feedbackInput"
+          name="feedback"
+          class="feedback-input"
+          placeholder="Type whatever you want to say here…"
+          rows="7"
+          aria-describedby="charCount statusMessage"
+        ></textarea>
+
+        <div class="card-footer">
+          <span id="charCount" class="char-count">0 characters</span>
+
+          <div class="button-row">
+            <button type="button" id="ClearBtn" class="btn btn--ghost">
+              Clear
+            </button>
+            <button type="button" id="sendBtn" class="btn btn--primary">
+              <span class="btn__label">Send</span>
+              <span class="btn__sparkle" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <p id="statusMessage" class="status-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- RIGHT: Ambient -->
+    <section class="panel panel--ambient" aria-hidden="true">
+      <div class="ambient-orb"></div>
+      <div class="ambient-particles">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="success-burst" id="successBurst" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

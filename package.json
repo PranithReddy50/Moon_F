@@ -1,0 +1,16 @@
+{
+  "name": "moon-feedback",
+  "version": "1.0.0",
+  "description": "A premium moon-themed feedback page that quietly relays messages to Telegram.",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
